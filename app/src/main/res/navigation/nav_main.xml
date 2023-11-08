@@ -4,32 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_main"
     app:startDestination="@id/splashFragment">
-
+    <!--Home-->
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.myfilimoapp.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
-    <fragment
-        android:id="@+id/detailFragment"
-        android:name="com.example.myfilimoapp.ui.detail.DetailFragment"
-        android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+    <action
+        android:id="@+id/actionToHome"
+        app:destination="@id/homeFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_exit_anim"/>
+    <!--Favorite-->
     <fragment
         android:id="@+id/favoriteFragment"
         android:name="com.example.myfilimoapp.ui.favorite.FavoriteFragment"
         android:label="fragment_favorite"
         tools:layout="@layout/fragment_favorite" />
+    <!--Search-->
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.example.myfilimoapp.ui.search.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
+    <!--Register-->
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.myfilimoapp.ui.register.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
+    <!--Splash-->
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.myfilimoapp.ui.splash.SplashFragment"
@@ -43,12 +49,23 @@
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_exit_anim" />
     </fragment>
-
+    <!--این action هایی که ما نوشتیم گلوبال هستن یعنی دیگه نمیام دقیق بگم اگه از فلان صفحه اومد به فلان صفحه ممکنه از صفحهx,y,z بریم به صفحه t و الان سه تا مبدا مقصد یا همون action باید اضافه کنیم-->
+    <!--پس بهتره یه گلوبال بنویسیم و بگیم از هر صفحه ای که اومد به این صفحه فلان بشه حالا-->
+    <!--Detail-->
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.myfilimoapp.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="movieID"
+            app:argType="integer" />
+    </fragment>
     <action
-        android:id="@+id/actionToHome"
-        app:destination="@id/homeFragment"
+        android:id="@+id/actionToDetail"
+        app:destination="@id/detailFragment"
         app:enterAnim="@anim/nav_default_enter_anim"
         app:exitAnim="@anim/nav_default_exit_anim"
         app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-        app:popExitAnim="@anim/nav_default_exit_anim"/>
+        app:popExitAnim="@anim/nav_default_exit_anim" />
 </navigation>

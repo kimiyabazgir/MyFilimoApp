@@ -6,5 +6,7 @@ object Constants {
     //از https معمولا استفاده می کنیم چون از اندروید 5 به بعد خطا میگیریم معمولا
     const val BASE_URL="https://moviesapi.ir/api/v1/"
     const val CONNECTION_TIME=60L
+    const val MOVIES_TABLE="movies_table"
+    const val MOVIES_DATABASE="movies_database"
 
 }

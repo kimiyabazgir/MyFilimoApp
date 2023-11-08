@@ -35,6 +35,8 @@
         <item name="startIconTint">@color/philippineSilver</item>
     </style>
     <!--RoundedImageView-->
+    <!--این استایل برای گرد کردن گوشه های عکس  -->
+    <!--مورد دوم میگیم گرد بشه و مورد سوم میگیم چقدر گرد بشه-->
     <style name="RoundedImageView">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">@dimen/_10mdp</item>

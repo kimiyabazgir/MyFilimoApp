@@ -1,0 +1,92 @@
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(revision d2aa3639515ac30c35cabf7ca172f3a1b0f9cdc8)
++++ b/.idea/vcs.xml	(revision d2aa3639515ac30c35cabf7ca172f3a1b0f9cdc8)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: app/src/main/java/com/example/myfilimoapp/db/MovieEntity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/myfilimoapp/db/MovieEntity.kt b/app/src/main/java/com/example/myfilimoapp/db/MovieEntity.kt
+new file mode 100644
+--- /dev/null	(revision d2aa3639515ac30c35cabf7ca172f3a1b0f9cdc8)
++++ b/app/src/main/java/com/example/myfilimoapp/db/MovieEntity.kt	(revision d2aa3639515ac30c35cabf7ca172f3a1b0f9cdc8)
+@@ -0,0 +1,3 @@
++package com.example.myfilimoapp.db
++
++data class MovieEntity()
+Index: app/src/main/java/com/example/myfilimoapp/db/MoviesDao.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/myfilimoapp/db/MoviesDao.kt b/app/src/main/java/com/example/myfilimoapp/db/MoviesDao.kt
+new file mode 100644
+--- /dev/null	(revision d2aa3639515ac30c35cabf7ca172f3a1b0f9cdc8)
++++ b/app/src/main/java/com/example/myfilimoapp/db/MoviesDao.kt	(revision d2aa3639515ac30c35cabf7ca172f3a1b0f9cdc8)
+@@ -0,0 +1,4 @@
++package com.example.myfilimoapp.db
++
++interface MoviesDao {
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/myfilimoapp/repository/SearchRepository.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/myfilimoapp/repository/SearchRepository.kt b/app/src/main/java/com/example/myfilimoapp/repository/SearchRepository.kt
+new file mode 100644
+--- /dev/null	(revision d2aa3639515ac30c35cabf7ca172f3a1b0f9cdc8)
++++ b/app/src/main/java/com/example/myfilimoapp/repository/SearchRepository.kt	(revision d2aa3639515ac30c35cabf7ca172f3a1b0f9cdc8)
+@@ -0,0 +1,4 @@
++package com.example.myfilimoapp.repository
++
++class SearchRepository {
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/myfilimoapp/viewmodel/SearchViewmodel.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/myfilimoapp/viewmodel/SearchViewmodel.kt b/app/src/main/java/com/example/myfilimoapp/viewmodel/SearchViewmodel.kt
+new file mode 100644
+--- /dev/null	(revision d2aa3639515ac30c35cabf7ca172f3a1b0f9cdc8)
++++ b/app/src/main/java/com/example/myfilimoapp/viewmodel/SearchViewmodel.kt	(revision d2aa3639515ac30c35cabf7ca172f3a1b0f9cdc8)
+@@ -0,0 +1,4 @@
++package com.example.myfilimoapp.viewmodel
++
++class SearchViewmodel {
++}
+\ No newline at end of file
+Index: app/src/main/res/layout/empty_items.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/empty_items.xml b/app/src/main/res/layout/empty_items.xml
+new file mode 100644
+--- /dev/null	(revision d2aa3639515ac30c35cabf7ca172f3a1b0f9cdc8)
++++ b/app/src/main/res/layout/empty_items.xml	(revision d2aa3639515ac30c35cabf7ca172f3a1b0f9cdc8)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++             android:layout_width="match_parent"
++             android:layout_height="match_parent">
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file

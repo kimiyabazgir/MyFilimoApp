@@ -18,3 +18,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "My FilimoApp"
 include ':app'
+include ':domain'

@@ -5,12 +5,12 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.home.HomeFragment">
-    <!-- برای اسکرول شدن کل صفحه بکار میره اینجا که اسکرول های توو در توو داریم سه تا ریسایکلذویو داریم-->
+    <!-- برای اسکرول شدن کل صفحه بکار میره اینجا که اسکرول های توو در توو داریم سه تا ریسایکلرویو داریم-->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/moviesScrollLay"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <!--هر نستد اسکرول ویو نیاز به یه کانتینر داره که در اینجا یه کانسترینت لایوت تعریف کردیم بعنوان کانتینرش اینو بدون که نستد اسکرول بیشتر از یه چایلد نمیتونه داشتخ باشه که اونم همون کانتینرشه-->
+        <!--هر نستد اسکرول ویو نیاز به یه کانتینر داره که در اینجا یه کانسترینت لایوت تعریف کردیم بعنوان کانتینرش اینو بدون که نستد اسکرول بیشتر از یه چایلد نمیتونه داشته باشه که اونم همون کانتینرشه-->
         <!--Container-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -94,6 +94,16 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/lastMoviesTitle" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Loading-->
+        <ProgressBar
+            android:id="@+id/moviesLoading"
+            android:layout_width="@dimen/_20mdp"
+            android:layout_height="@dimen/_20mdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

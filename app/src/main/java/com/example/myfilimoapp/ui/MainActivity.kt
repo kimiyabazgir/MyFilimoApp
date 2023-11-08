@@ -24,9 +24,10 @@ class MainActivity : AppCompatActivity() {
             navController=findNavController(R.id.navHost)
             //وصل کردن bottom Navigation به navController
         bottomNav.setupWithNavController(navController)
-            //میام میگم صفحه هایی که رفتی اگر بجز صفحه splash بود نشون بده باتم نویگیشنو تووشون
+            //میام میگم صفحه هایی که رفتی اگر بجز صفحه splash وregister وdetail بود نشون بده باتم نویگیشنو تووشون
+            //در واقع یعنی نشون نده توو زیر این صفحات باتم نویگیشنو
         navController.addOnDestinationChangedListener{_,destination,_ ->
-           if (destination.id==R.id.splashFragment || destination.id==R.id.registerFragment){
+           if (destination.id==R.id.splashFragment || destination.id==R.id.registerFragment || destination.id==R.id.detailFragment){
                bottomNav.visibility=View.GONE
            }else{
                bottomNav.visibility=View.VISIBLE

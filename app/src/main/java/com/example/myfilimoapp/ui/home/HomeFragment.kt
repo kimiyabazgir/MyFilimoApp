@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.SnapHelper
@@ -15,6 +16,7 @@ import com.example.myfilimoapp.ui.home.adapters.GenresAdapter
 import com.example.myfilimoapp.ui.home.adapters.LastMoviesAdapter
 import com.example.myfilimoapp.ui.home.adapters.TopMoviesAdapter
 import com.example.myfilimoapp.utils.initRecycler
+import com.example.myfilimoapp.utils.showInvisible
 import com.example.myfilimoapp.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -70,7 +72,7 @@ class HomeFragment : Fragment() {
                             false
                         ), topMoviesAdapter
                     )
-                    //حالا ایندیکیتور رو وصل میکنیم به ریسایکلر ویومون و باpagersnaphelperمیگیمکاربر با هر اسکرول بتونه فقط یک ایتیم جابجا کنه نتونه نصفه ایتیم وایسه
+                    //حالا ایندیکیتور رو وصل میکنیم به ریسایکلر ویومون و با pagersnaphelperمیگیم کاربر با هر اسکرول بتونه فقط یک ایتیم جابجا کنه نتونه نصفه ایتیم وایسه
                     //Indicator
                     pagerHelper.attachToRecyclerView(topMoviesRecycler)
                     topmoviesIndicator.attachToRecyclerView(topMoviesRecycler, pagerHelper)
@@ -95,9 +97,24 @@ class HomeFragment : Fragment() {
                         requireContext(),
                         LinearLayoutManager.HORIZONTAL,
                         false
-                    ), lastMoviesAdapter
-                )
+                    ), lastMoviesAdapter)
+            }
+            //***
+            //میگم اومد کلیک کرد روو یه مورد از اداپتور حالا که یه کلیکی نوشتم که دیتارو میگیره میبره هرجا بخوای بیا idرو بگیر و ببر به فلان صفحه
+          lastMoviesAdapter.SetOnItemClickListener {
+              val direction=HomeFragmentDirections.actionToDetail(it.id!!.toInt())
+              findNavController().navigate(direction)
+          }
+            //Loading
+            viewModel.loading.observe(viewLifecycleOwner) {
+                if (it) {
+                    moviesLoading.showInvisible(true)
+                    moviesScrollLay.showInvisible(false)
 
+                } else {
+                    moviesLoading.showInvisible(false)
+                    moviesScrollLay.showInvisible(true)
+                }
             }
         }
     }

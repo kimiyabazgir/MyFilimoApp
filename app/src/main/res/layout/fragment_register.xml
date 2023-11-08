@@ -108,6 +108,7 @@
         app:layout_constraintEnd_toEndOf="@id/submitBtn"
         app:layout_constraintTop_toTopOf="@id/submitBtn"
         app:layout_constraintStart_toStartOf="@id/submitBtn"/>
+    <!--تفاوت visibility که gone باشه با invisible اینه که در gone فضای ویو مورد نظر در ui در نظر گرفته نمیشهو بقیه ویو ها وجود اون ویو رو در نظر نمی گیرند اما در invisible برعکس است-->
 
 
 
